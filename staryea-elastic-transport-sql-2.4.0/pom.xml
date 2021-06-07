@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.staryea</groupId>
+	<artifactId>staryea-elastic-transport-sql-6.5.4</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.test.skip>true</maven.test.skip>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.elasticsearch</groupId>
+			<artifactId>elasticsearch</artifactId>
+			<version>2.4.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-transport-http -->
+		<!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-transport-local -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-local</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-transport-http -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-http</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.nlpcn</groupId>
+			<artifactId>elasticsearch-sql</artifactId>
+			<version>2.4.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.0.15</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>ru.opensecreto</groupId>
+			<artifactId>jconsole</artifactId>
+			<version>1.0</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>x-pack-transport</artifactId>
+			<version>5.6.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version>
+				<!-- <executions> <execution> <id>copy-resources</id> <phase>process-resources</phase> 
+					<goals> <goal>copy-resources</goal> </goals> <configuration> <outputDirectory>${project.build.outputDirectory}</outputDirectory> 
+					<resources> <resource> <directory>src/main/java</directory> <excludes> <include>**/*.java</include> 
+					</includes> </resource> </resources> </configuration> </execution> </executions> -->
+			</plugin>
+		</plugins>
+	</build>
+</project>
